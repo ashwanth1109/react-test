@@ -3,7 +3,7 @@ import React from "react";
 const showUser = (user, history, updateUser) => {
     console.log(user);
     updateUser(user);
-    history.push("/user");
+    history.push(`/user/${user.login}`);
 };
 
 const UserDisplay = ({ user, history, updateUser }) => (
