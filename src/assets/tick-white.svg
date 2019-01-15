@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="163px" height="120px" viewBox="0 0 163 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>tick</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-471.000000, -75.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="tick" transform="translate(471.000000, 75.000000)">
+                <path d="M160.617595,2.69714286 C157.44116,-0.476825397 152.29125,-0.476825397 149.114179,2.69714286 L51.6624211,100.064444 L14.2035595,62.6384127 C11.0271248,59.4644444 5.87721442,59.4647619 2.70014425,62.6384127 C-0.476608187,65.8120635 -0.476608187,70.9574603 2.70014425,74.1314286 L45.9107135,117.303492 C49.0861949,120.477143 54.2399181,120.474921 57.4141287,117.303492 L160.617595,14.1904762 C163.794347,11.0168254 163.794029,5.87111111 160.617595,2.69714286 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
