@@ -1,13 +1,14 @@
 {
-  "main.css": "/react-test/static/css/main.cff09fe3.chunk.css",
-  "main.js": "/react-test/static/js/main.494ce039.chunk.js",
-  "main.js.map": "/react-test/static/js/main.494ce039.chunk.js.map",
-  "static/js/1.4a34e45d.chunk.js": "/react-test/static/js/1.4a34e45d.chunk.js",
-  "static/js/1.4a34e45d.chunk.js.map": "/react-test/static/js/1.4a34e45d.chunk.js.map",
+  "main.css": "/react-test/static/css/main.56a140f4.chunk.css",
+  "main.js": "/react-test/static/js/main.b3f3e5cf.chunk.js",
+  "main.js.map": "/react-test/static/js/main.b3f3e5cf.chunk.js.map",
+  "static/js/1.0405fae2.chunk.js": "/react-test/static/js/1.0405fae2.chunk.js",
+  "static/js/1.0405fae2.chunk.js.map": "/react-test/static/js/1.0405fae2.chunk.js.map",
   "runtime~main.js": "/react-test/static/js/runtime~main.745cc6a5.js",
   "runtime~main.js.map": "/react-test/static/js/runtime~main.745cc6a5.js.map",
-  "static/css/main.cff09fe3.chunk.css.map": "/react-test/static/css/main.cff09fe3.chunk.css.map",
+  "static/media/search.svg": "/react-test/static/media/search.2e5a42b6.svg",
+  "static/css/main.56a140f4.chunk.css.map": "/react-test/static/css/main.56a140f4.chunk.css.map",
   "index.html": "/react-test/index.html",
-  "precache-manifest.75ddbb2496da17e8870b51505918f25c.js": "/react-test/precache-manifest.75ddbb2496da17e8870b51505918f25c.js",
+  "precache-manifest.1eb3192365b9c11de93753875d0530ad.js": "/react-test/precache-manifest.1eb3192365b9c11de93753875d0530ad.js",
   "service-worker.js": "/react-test/service-worker.js"
 }
