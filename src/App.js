@@ -10,7 +10,7 @@ class App extends Component {
         return (
             <Provider store={store}>
                 <React.Fragment>
-                    <Router>
+                    <Router basename={process.env.PUBLIC_URL}>
                         <React.Fragment>
                             <Route exact path="/" component={IndexPage} />
                             <Route path="/user" component={ShowPage} />
