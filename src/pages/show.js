@@ -16,6 +16,21 @@ const mapStateFromProps = state => {
     return state;
 };
 
+const mapDispatchToProps = dispatch => {
+    return {
+        updateUser: user =>
+            dispatch({
+                type: "USER",
+                user: user
+            }),
+        updateRepos: repos =>
+            dispatch({
+                type: "REPOS",
+                repos: repos
+            })
+    };
+};
+
 const s = {
     container: {
         width: "1000px",
@@ -75,27 +90,29 @@ const s = {
     }
 };
 
+const sortParameters = ["created", "updated", "pushed", "full_name"];
+
 class ShowPage extends React.Component {
     state = {
-        user: null,
-        repos: [],
         message: "Fetching User . . ."
     };
-    componentDidMount = async ({ selectedUser } = this.props) => {
+    componentDidMount = async (
+        { selectedUser, sortParameter, updateUser, updateRepos } = this.props
+    ) => {
         if (!!selectedUser) {
             try {
                 const res = await fetch(
                     `https://api.github.com/users/${selectedUser.login}`
                 );
                 const res1 = await fetch(
-                    `https://api.github.com/users/${selectedUser.login}/repos`
+                    `https://api.github.com/users/${
+                        selectedUser.login
+                    }/repos?sort=${sortParameters[sortParameter]}`
                 );
-                const data = await res.json();
-                const data1 = await res1.json();
-                this.setState({
-                    user: data,
-                    repos: data1
-                });
+                const user = await res.json();
+                updateUser(user);
+                const repos = await res1.json();
+                updateRepos(repos);
             } catch (err) {
                 console.error(err);
             }
@@ -107,11 +124,9 @@ class ShowPage extends React.Component {
     };
 
     render = (
-        { selectedUser, history } = this.props,
-        { user, repos, message } = this.state
+        { selectedUser, history, user, repos } = this.props,
+        { message } = this.state
     ) => {
-        console.log(user);
-        console.log(repos);
         if (!!user) {
             // const { avatar_url, id, repos_url } = selectedUser;
             return (
@@ -168,4 +183,7 @@ class ShowPage extends React.Component {
     };
 }
 
-export default connect(mapStateFromProps)(ShowPage);
+export default connect(
+    mapStateFromProps,
+    mapDispatchToProps
+)(ShowPage);
