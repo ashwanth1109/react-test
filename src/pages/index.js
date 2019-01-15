@@ -69,7 +69,7 @@ class IndexPage extends React.Component {
     // }
 
     fetchData = async () => {
-        // this.props.updateButtonLoading(true);
+        this.props.updateButtonLoading(true);
         const searchTerm = this.refs.search.value;
         if (searchTerm !== "") {
             try {
@@ -80,6 +80,7 @@ class IndexPage extends React.Component {
                 res.json()
                     .then(data => {
                         this.props.updateUserList(data.items);
+                        this.props.updateButtonLoading(false);
                     })
                     .catch(err => {
                         throw err;
