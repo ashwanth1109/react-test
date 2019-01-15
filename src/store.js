@@ -34,6 +34,18 @@ const menuState = (state = false, action) =>
     action.type === "MENU_STATE" ? action.menuState : state;
 
 // ------------------------------------------------------------
+// User Reducer
+// ------------------------------------------------------------
+const user = (state = null, action) =>
+    action.type === "USER" ? action.user : state;
+
+// ------------------------------------------------------------
+// Repos Reducer
+// ------------------------------------------------------------
+const repos = (state = [], action) =>
+    action.type === "REPOS" ? action.repos : state;
+
+// ------------------------------------------------------------
 // Export Store
 // ------------------------------------------------------------
 export default createStore(
@@ -42,6 +54,8 @@ export default createStore(
         buttonLoading,
         selectedUser,
         sortParameter,
-        menuState
+        menuState,
+        user,
+        repos
     })
 );
