@@ -69,9 +69,10 @@ class IndexPage extends React.Component {
     // }
 
     fetchData = async () => {
-        this.props.updateButtonLoading(true);
+        this.props.updateUserList([]);
         const searchTerm = this.refs.search.value;
         if (searchTerm !== "") {
+            this.props.updateButtonLoading(true);
             try {
                 const res = await fetch(
                     `https://api.github.com/search/users?q=${searchTerm}`
