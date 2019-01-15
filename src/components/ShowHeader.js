@@ -30,13 +30,12 @@ const mapDispatchToProps = dispatch => ({
             const res = await fetch(
                 `https://api.github.com/users/${
                     selectedUser.login
-                }/repos?sort="${sortParameters[sortParameter]}"`
+                }/repos?sort=${sortParameters[sortParameter]}`
             );
-            const data = await res.json();
-            console.log(data);
+            const repos = await res.json();
             dispatch({
-                type: "UPDATE_USER",
-                user: data
+                type: "REPOS",
+                repos: repos
             });
         } catch (err) {
             console.error(err);
